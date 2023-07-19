@@ -151,7 +151,7 @@ while True:
 
     # Draw the avoidant objects
     for avoidant_object in avoidant_objects:
-        pygame.draw.rect(screen, RED, (avoidant_object["x"], avoidant_object["y"], avoidant_object["width"], avoidant_object["height"]))
+        screen.blit(climbing_object_image, (avoidant_object["x"], avoidant_object["y"]))
 
     # Draw the player
     pygame.draw.rect(screen, RED, (player_pos[0] - player_size // 2, player_pos[1] - player_size // 2, player_size, player_size))
