@@ -1,11 +1,13 @@
 # Pydash-main
 
 <h2>State Farm Super Squad </h2>  <br />
+<h5>
 Aadya Doma  <br />
 Sritha Kavuri  <br />
 Shreshta Kethireddy  <br />
 Ved Kommalapati  <br />
 Chirstian Reynolds  <br />  <br />
+</h5>
 
 Link to YouTube video: xxx  <br />  <br />
 
