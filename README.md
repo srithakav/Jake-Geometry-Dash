@@ -1,6 +1,6 @@
 # Pydash-main
 
-State Farm Super Squad  <br />
+<h2>State Farm Super Squad </h2>  <br />
 Aadya Doma  <br />
 Sritha Kavuri  <br />
 Shreshta Kethireddy  <br />
