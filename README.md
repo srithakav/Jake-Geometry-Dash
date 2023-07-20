@@ -9,6 +9,8 @@ Chirstian Reynolds  <br />  <br />
 
 Link to YouTube video: xxx  <br />  <br />
 
+Image to Represent our Game!  <br />  <br />
+
 How to play:  <br />
 Press the space bar or the up button in order to make Jake from State Farm avoid the obstacles (the spikes). The longer you avoid the obstacles, the higher your score!  <br />
 (Inspired by Geometry Dash, Flappy Bird, and the Google Dinosaur Game)  <br />  <br />
