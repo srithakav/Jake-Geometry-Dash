@@ -120,16 +120,34 @@ def check_climbable_collisions():
 
 # Function to show the welcome screen
 def show_welcome_screen():
-    screen.fill(WHITE)
+    screen.fill(RED)
 
-    font = pygame.font.Font(None, 48)
-    title_text = font.render("Welcome to Geometry Dash!", True, RED)
-    instruction_text = font.render("Press SPACE to start", True, RED)
+    font = pygame.font.Font(None, 30)
+    title_text = font.render("Welcome to State Farm Super Sprint!", True, WHITE)
+    instruction_text1 = font.render("Jake is embarking on a treacherous journey" , True, WHITE)
+    instruction_text2 = font.render("through a tornado to help policy holders with their claims." , True, WHITE)
+    instruction_text3 = font.render("Help him by directing him away from the obstacles." , True, WHITE)
+    instruction_text4 = font.render("Use the space bar to jump up. Keep in mind," , True, WHITE)
+    instruction_text5 = font.render("you will never know what to expect so stay safe and" , True, WHITE)
+    instruction_text6 = font.render("get insured by State Farm! Good luck!" , True, WHITE)
+    instruction_text = font.render("Press SPACE to start", True, WHITE)
 
-    title_rect = title_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 50))
-    instruction_rect = instruction_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+    title_rect = title_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 250))
+    instruction_rect1 = instruction_text1.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2-200 ))
+    instruction_rect2 = instruction_text2.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2-150 ))
+    instruction_rect3 = instruction_text3.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2-100 ))
+    instruction_rect4 = instruction_text4.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2-50 ))
+    instruction_rect5 = instruction_text5.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 ))
+    instruction_rect6 = instruction_text6.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2+50 ))
+    instruction_rect = instruction_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 +100))
 
     screen.blit(title_text, title_rect)
+    screen.blit(instruction_text1, instruction_rect1)
+    screen.blit(instruction_text2, instruction_rect2)
+    screen.blit(instruction_text3, instruction_rect3)
+    screen.blit(instruction_text4, instruction_rect4)
+    screen.blit(instruction_text5, instruction_rect5)
+    screen.blit(instruction_text6, instruction_rect6)
     screen.blit(instruction_text, instruction_rect)
 
     pygame.display.update()
