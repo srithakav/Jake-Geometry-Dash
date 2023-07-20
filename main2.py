@@ -64,7 +64,7 @@ clock = pygame.time.Clock()
 start_time = pygame.time.get_ticks()
 
 # List to store top scores
-leaderboard = []
+# leaderboard = []
 
 # Function to draw objects
 def draw_objects():
@@ -142,19 +142,19 @@ def show_welcome_screen():
                     return
 
 # Function to display the leaderboard
-def display_leaderboard():
-    font = pygame.font.Font(None, 24)
+# def display_leaderboard():
+#     font = pygame.font.Font(None, 24)
 
-    leaderboard_text = font.render("Leaderboard:", True, RED)
-    screen.blit(leaderboard_text, (10, 10))
+#     leaderboard_text = font.render("Leaderboard:", True, RED)
+#     screen.blit(leaderboard_text, (10, 10))
 
-    y_offset = 30
-    for i, score in enumerate(leaderboard[:5]):
-        score_text = font.render(f"{i+1}. {score}", True, RED)
-        screen.blit(score_text, (10, y_offset))
-        y_offset += 25
+#     y_offset = 30
+#     for i, score in enumerate(leaderboard[:5]):
+#         score_text = font.render(f"{i+1}. {score}", True, RED)
+#         screen.blit(score_text, (10, y_offset))
+#         y_offset += 25
 
-    pygame.display.update()
+#     pygame.display.update()
 
 # Main game loop
 while True:
@@ -185,10 +185,10 @@ while True:
         start_time = pygame.time.get_ticks()
 
         # Update leaderboard with the latest score
-        leaderboard.append(int((pygame.time.get_ticks() - start_time) / 1000))
-        leaderboard.sort(reverse=True)
-        if len(leaderboard) > 5:
-            leaderboard = leaderboard[:5]
+        # leaderboard.append(int((pygame.time.get_ticks() - start_time) / 1000))
+        # leaderboard.sort(reverse=True)
+        # if len(leaderboard) > 5:
+        #     leaderboard = leaderboard[:5]
 
     player_velocity += gravity
     player_pos[1] += player_velocity
@@ -220,7 +220,10 @@ while True:
     draw_objects()
 
     # Draw the player
-    pygame.draw.rect(screen, RED, (player_pos[0] - player_size // 2, player_pos[1] - player_size // 2, player_size, player_size))
+    player = pygame.image.load("thursjake.png")
+    player = pygame.transform.scale(player, (80, 105))
+    screen.blit(player, (player_pos[0] - player_size // 2, (player_pos[1] - player_size // 2) - 75))
+    # pygame.draw.rect(screen, RED, (player_pos[0] - player_size // 2, player_pos[1] - player_size // 2, player_size, player_size))
 
     # Draw the score on the screen
     font = pygame.font.Font(None, 36)
@@ -229,7 +232,7 @@ while True:
     screen.blit(score_text, (10, 10))
 
     # Display the leaderboard
-    display_leaderboard()
+    # display_leaderboard()
 
     pygame.display.update()
     clock.tick(60)
