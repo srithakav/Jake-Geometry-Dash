@@ -10,7 +10,7 @@ pygame.init()
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 background_image = pygame.image.load("neighborhood.png")
-background_width = background_image.get_width() * 0.7
+background_width = background_image.get_width() * 0.5
 background_height = background_image.get_height()
 SCREEN_WIDTH = background_width
 SCREEN_HEIGHT = background_height
