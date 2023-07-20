@@ -1,55 +1,67 @@
 import pygame
 import sys
 
-# Initialize pygame
-pygame.init()
-
 # Constants
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+WIDTH, HEIGHT = 800, 600
+FPS = 60
+
+# Colors
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 
-# Create the game window
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Geometry Dash")
+# Player
+PLAYER_SIZE = 50
+PLAYER_Y = HEIGHT - PLAYER_SIZE - 10
+PLAYER_VY = 0
+GRAVITY = 1
 
-# Player variables
-player_size = 50
-player_pos = [SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2]
-player_velocity = 0
+# Obstacle
+OBSTACLE_WIDTH = 50
+OBSTACLE_HEIGHT = 100
+OBSTACLE_X = WIDTH
+OBSTACLE_SPEED = 10
 
-# Gravity and jump variables
-gravity = 0.5
-jump_strength = -10
+def draw_window(window, player_rect, obstacle_rect):
+    window.fill(WHITE)
+    pygame.draw.rect(window, RED, player_rect)
+    pygame.draw.rect(window, RED, obstacle_rect)
+    pygame.display.update()
 
-# Main game loop
-while True:
-    # Event handling
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+def main():
+    pygame.init()
+    window = pygame.display.set_mode((WIDTH, HEIGHT))
+    clock = pygame.time.Clock()
+
+    player_rect = pygame.Rect(WIDTH / 4, PLAYER_Y, PLAYER_SIZE, PLAYER_SIZE)
+    obstacle_rect = pygame.Rect(OBSTACLE_X, HEIGHT - OBSTACLE_HEIGHT, OBSTACLE_WIDTH, OBSTACLE_HEIGHT)
+
+    while True:
+        clock.tick(FPS)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.KEYDOWN and player_rect.y == PLAYER_Y:
+                if event.key == pygame.K_SPACE:
+                    PLAYER_VY = -20
+
+        if player_rect.y < PLAYER_Y:
+            PLAYER_VY += GRAVITY
+        else:
+            player_rect.y = PLAYER_Y
+            PLAYER_VY = 0
+
+        player_rect.y += PLAYER_VY
+        obstacle_rect.x -= OBSTACLE_SPEED
+
+        if obstacle_rect.right < 0:
+            obstacle_rect.x = WIDTH
+
+        if player_rect.colliderect(obstacle_rect):
             pygame.quit()
             sys.exit()
 
-    # Player input handling
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_SPACE] and player_pos[1] >= SCREEN_HEIGHT - player_size:
-        player_velocity = jump_strength
+        draw_window(window, player_rect, obstacle_rect)
 
-    # Update player position and velocity
-    player_velocity += gravity
-    player_pos[1] += player_velocity
-
-    # Collision detection with the ground
-    if player_pos[1] >= SCREEN_HEIGHT - player_size:
-        player_pos[1] = SCREEN_HEIGHT - player_size
-        player_velocity = 0
-
-    # Clear the screen
-    screen.fill(WHITE)
-
-    # Draw the player
-    pygame.draw.rect(screen, RED, (player_pos[0], player_pos[1], player_size, player_size))
-
-    # Update the display
-    pygame.display.update()
+if __name__ == "__main__":
+    main()
