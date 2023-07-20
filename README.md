@@ -1,18 +1,18 @@
 # Pydash-main
 
-State Farm Super Squad
-Aadya Doma
-Sritha Kavuri
-Shreshta Kethireddy
-Ved Kommalapati
-Chirstian Reynolds
+State Farm Super Squad  <br />
+Aadya Doma  <br />
+Sritha Kavuri  <br />
+Shreshta Kethireddy  <br />
+Ved Kommalapati  <br />
+Chirstian Reynolds  <br />  <br />
 
-Link to YouTube video: xxx
+Link to YouTube video: xxx  <br />  <br />
 
-How to play:
-Press the space bar or the up button in order to make Jake from State Farm avoid the obstacles (the spikes). The longer you avoid the obstacles, the higher your score!
-(Inspired by Geometry Dash, Flappy Bird, and the Google Dinosaur Game)
+How to play:  <br />
+Press the space bar or the up button in order to make Jake from State Farm avoid the obstacles (the spikes). The longer you avoid the obstacles, the higher your score!  <br />
+(Inspired by Geometry Dash, Flappy Bird, and the Google Dinosaur Game)  <br />  <br />
 
-To run game, run this code in the terminal after cloning the repository:
-Windows: python -m pip install -U pygame==2.5.0 --user
+To run game, run this code in the terminal after cloning the repository: <br />
+Windows: python -m pip install -U pygame==2.5.0 --user  <br />
 Mac: pip install pygame
