@@ -17,7 +17,7 @@ HOW TO PLAY:  <br />
 Press the space bar or the up button in order to make Jake from State Farm avoid the obstacles (the spikes). The longer you avoid the obstacles, the higher your score!  <br />
 (Inspired by Geometry Dash, Flappy Bird, and the Google Dinosaur Game)  <br />  <br />
 
-TO RUN GAME, RUN THIS CODE IN THE TERMINAL AFTER CLONING THE REPOSITORY:
+TO RUN GAME, RUN THIS CODE IN THE TERMINAL AFTER CLONING THE REPOSITORY:<br /> 
 Windows: <br /> 
 ``` python -m pip install -U pygame==2.5.0 --user ``` <br />
 Mac: <br /> 
