@@ -9,7 +9,9 @@ Chirstian Reynolds  <br />  <br />
 
 Link to YouTube video: xxx  <br />  <br />
 
-Image to Represent our Game! meow  <br />  <br />
+Image to Represent our Game! <br />
+<img width="752" alt="image" src="https://github.com/srithakav/Pydash-main/assets/61426851/86691ea4-023a-4a34-aaa3-3a5a01e9a9d1">
+<br />  <br />
 
 How to play:  <br />
 Press the space bar or the up button in order to make Jake from State Farm avoid the obstacles (the spikes). The longer you avoid the obstacles, the higher your score!  <br />
