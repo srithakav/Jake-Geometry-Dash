@@ -17,7 +17,7 @@ SCREEN_HEIGHT = background_height
 
 # Create the game window
 screen = pygame.display.set_mode((background_width, background_height))
-pygame.display.set_caption("Geometry Dash")
+pygame.display.set_caption("State Farm Super Sprint")
 
 # Background
 background_image = pygame.image.load("neighborhood.png")
