@@ -1,5 +1,6 @@
 import pygame
 import sys
+import os
 import random
 
 # Initialize pygame
@@ -8,7 +9,8 @@ pygame.init()
 # Constants
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
-background_image = pygame.image.load("background.png")
+red = pygame.image.load("jakeywakey.gif")
+background_image = pygame.image.load("neighborhood.png")
 background_width = background_image.get_width()
 background_height = background_image.get_height()
 SCREEN_WIDTH = background_width
@@ -19,7 +21,7 @@ screen = pygame.display.set_mode((background_width, background_height))
 pygame.display.set_caption("Geometry Dash")
 
 # Background
-background_image = pygame.image.load("background.png")
+background_image = pygame.image.load("neighborhood.png")
 background_x = 0
 
 # Player variables
@@ -154,6 +156,9 @@ while True:
         screen.blit(climbing_object_image, (avoidant_object["x"], avoidant_object["y"]))
 
     # Draw the player
+    # avatar = pygame.image.load(os.path.join("images", "minecraftJake.png"))
+    # pygame.display.set_icon(avatar)
+    # pygame.image.save(screen, red)
     pygame.draw.rect(screen, RED, (player_pos[0] - player_size // 2, player_pos[1] - player_size // 2, player_size, player_size))
 
     # Update the score based on time elapsed
