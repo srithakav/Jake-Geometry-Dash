@@ -23,6 +23,10 @@ pygame.display.set_caption("Geometry Dash")
 background_image = pygame.image.load("neighborhood.png")
 background_x = 0
 
+# Music
+pygame.mixer.music.load("statefarm2.mp3")
+pygame.mixer_music.play()
+
 # Player variables
 player_size = 50
 player_pos = [SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2]
