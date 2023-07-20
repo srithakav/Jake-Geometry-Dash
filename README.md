@@ -16,5 +16,7 @@ Press the space bar or the up button in order to make Jake from State Farm avoid
 (Inspired by Geometry Dash, Flappy Bird, and the Google Dinosaur Game)  <br />  <br />
 
 To run game, run this code in the terminal after cloning the repository: <br />
-Windows: python -m pip install -U pygame==2.5.0 --user  <br />
-Mac: pip install pygame
+Windows: <br /> 
+``` python -m pip install -U pygame==2.5.0 --user ``` <br />
+Mac: <br /> 
+``` pip install pygame ```
