@@ -34,9 +34,9 @@ gravity = 0.5
 jump_strength = -10
 
 # Object variables
-object_image = pygame.image.load("object.png")
-object_width = int(object_image.get_width() * 0.8)
-object_height = int(object_image.get_height() * 0.8)
+object_image = pygame.image.load("carcrash.png")
+object_width = int(object_image.get_width() * 0.15)
+object_height = int(object_image.get_height() * 0.15)
 object_image = pygame.transform.scale(object_image, (object_width, object_height))
 object_x = SCREEN_WIDTH
 object_y = SCREEN_HEIGHT - object_height
@@ -74,6 +74,8 @@ def draw_objects():
 
     # Draw the avoidant objects
     for avoidant_object in avoidant_objects:
+        # coin = pygame.image.load("coin.png")
+        # coin = pygame.transform.scale(coin, (80, 105))
         pygame.draw.rect(screen, RED, (avoidant_object["x"], avoidant_object["y"], avoidant_object["width"], avoidant_object["height"]))
 
 # Function to update objects
