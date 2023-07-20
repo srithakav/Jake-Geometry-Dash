@@ -7,7 +7,7 @@ Shreshta Kethireddy  <br />
 Ved Kommalapati  <br />
 Chirstian Reynolds  <br />  <br />
 
-Link to YouTube video: xxx  <br />  <br /> 
+Link to YouTube video: https://youtu.be/e9onBXKJyGY  <br />  <br /> 
 
 Image to Represent our Game! <br />
 <img width="752" alt="image" src="https://github.com/srithakav/Pydash-main/assets/61426851/86691ea4-023a-4a34-aaa3-3a5a01e9a9d1">
